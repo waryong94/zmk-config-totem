@@ -4,3 +4,9 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_right
 # there is no settingsreset (needed) for the XIAO
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    uses: petejohanson/zmk/.github/workflows/build-user-config.yml@core/zephyr-3.5-update
